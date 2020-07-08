@@ -1,3 +1,4 @@
+//Vector is a template class in STL of C++, however, that a vector might consume more memory than an array
 //Topic: std::vector
 /*why it is called vector?
 ->vector is a sequence container also known as a dynamic array or array list
@@ -10,6 +11,7 @@ of already created array & copy all the elements into newly creatred array
 */
 #include <iostream>
 #include <vector>
+#include<algorithm>  //to perform sort
 using namespace std;
 
 int main()
@@ -69,5 +71,19 @@ int main()
     v3.clear();
     for(auto i:v3)
         cout<<"\n"<<i; 
+        
+    vector<int>v4={30,10,20,60,40};
+    sort(v4.begin(),v4.end()); //use #include<algorithm> to sort to order the vector elements in an ascending order.
+                                //10,20,30,40,60
+    sort(v4.begin(),v4.end(),greater<int>());    //descending order, using the greater<int>() as the third argument.
+           
+                                                //60,40,30,20,10
+    //swap()
+    vector<int>v5,v6;
+    v5.push_back(5);
+    v6.push_back(20);
+    v5.swap(v6);
+    for(auto i:v6)
+        cout<<"\t"<<i; //5
     return 0;
 }
