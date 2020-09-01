@@ -43,4 +43,3 @@ Implement unordered data structures that can be quickly searched
 - unordered_multiset *(Introduced in C++11)*
 - unordered_map *(Introduced in C++11)*
 - unordered_multimap *(Introduced in C++11)*
-- 
